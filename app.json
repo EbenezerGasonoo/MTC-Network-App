@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "MTC NETWORK TV",
+    "slug": "mtc-network-tv",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1D2729"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "tv.mtcnetwork.app",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio",
+          "fetch"
+        ],
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "AVInitialRouteSharingPolicy": "AVInitialRouteSharingPolicyLongFormAudio"
+      }
+    },
+    "android": {
+      "package": "tv.mtcnetwork.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#080B10"
+      },
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "WAKE_LOCK"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "mtcnetwork"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT",
+            "LEANBACK_LAUNCHER"
+          ]
+        }
+      ]
+    },
+    "extra": {
+      "LIVE_STREAM_URL": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+      "RADIO_STREAM_URL": "https://stream.zeno.fm/f3wvbbqmdg8uv",
+      "API_URL": "http://10.0.2.2:5000",
+      "CDN_URL": "https://cdn.mtcnetwork.tv"
+    }
+  }
+}
